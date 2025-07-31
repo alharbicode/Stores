@@ -1,0 +1,125 @@
+﻿@model CLINT.Models.Item
+
+<style>
+	h1 {
+    font-family: 'Janna LT';
+    position: relative;
+    bottom: 230px;
+    left: 650px;
+    font-size: 50px;
+    color: darkred;
+}
+
+#go {
+    background-color: rgb(152,152,152,0.2);
+    border-color: rgb(152,152,152,0.2);
+    border-width: 1px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Janna LT";
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+    position: relative;
+    bottom: 30px;
+    left: 500px;
+}
+
+#back {
+    background-color: rgb(152,152,152,0.2);
+    border-color: rgb(152,152,152,0.2);
+    border-width: 1px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Janna LT";
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+    position: relative;
+    bottom: 30px;
+    left: 180px;
+}
+
+#adimge {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    bottom: 65px;
+    left: 895px;
+}
+
+#cancelimg {
+    width: 50px;
+    height: 37px;
+    position: relative;
+    bottom: 97px;
+    left: 700px;
+}
+
+#helpimg {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 100px;
+    left: 57px;
+}
+
+#del {
+    width: 188px;
+    height: 33px;
+    background-color: rgb(152,152,152,0.2);
+    border-color: rgb(152,152,152,0.2);
+    border-width: 1px;
+    position: relative;
+    bottom: 150px;
+    left: 550px;
+}
+
+#namepro {
+    font-size: 23px;
+    color: black;
+    position: relative;
+    bottom: 150px;
+    left: 880px;
+    font-weight: bold;
+    font-family: "Janna LT";
+}
+
+</style>
+
+	<div style="position:relative; top:3px; left:10px; width:1550px">
+		<input class="basenav" id="nav1" type="submit" value="الإعدادات" />
+		<input class="basenav" id="nav7" type="submit" value="أنظمة أخرى" />
+		<input class="basenav" id="nav8" type="submit" value="جرد مخزني" />
+		<input class="basenav" id="nav2" type="submit" value="إدارة الموارد البشرية" />
+		<input class="basenav" id="nav3" type="submit" value="إدارة الموظفين" />
+		<input id="nav4" type="submit" value="إدارة المخازن" />
+		<input class="basenav" id="nav5" type="submit" value="إدارة النظام" />
+		<input id="nav6" type="submit" value="إدارة حسابات المخازن" />
+	</div>
+	
+	
+	
+		<img id="settingimg" src="~/images/settings.png" />
+		<img id="storeimg" src="~/images/store.png" />
+		<img id="employeesimg" src="~/images/employees.png" />
+		<img id="sourceimg" src="~/images/source.png" />
+		<img id="systemimg" src="~/images/system.png" />
+		<div><img id="logoimg" src="~/images/logos.png" /></div>
+		<div><img id="drowerimg" src="~/images/drower.png" /></div>
+
+
+<form style="position:relative;top:50px" asp-action="Delete" asp-controller="Store">
+    <h1>حذف أصناف</h1>
+
+        <label id="namepro" asp-for="Id">رقم الصنف</label>
+        <input id="del" type="text" asp-for="Id" />
+
+	      <input id="go" type="submit" value="حذف" />
+	      <a asp-action="Index"><input id="back" type="button" value="إلغاء" /></a>
+
+            <div><img id="adimge" src="~/images/delete.png" /></div>
+            <div><img id="cancelimg" src="~/images/cancel.png" /></div>
+            <div><a href=""><img id="helpimg" src="~/images/help.png" title="مساعدة"/></a></div>
+
+</form>

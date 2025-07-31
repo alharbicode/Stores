@@ -1,0 +1,117 @@
+﻿@*@model CLINT.Models.Store
+
+<style>
+	h1{
+		font-family:'Janna LT';
+		position:relative;
+		bottom:230px;
+		left:650px;
+		font-size:50px;
+		color:green;
+	}
+	#go{
+    background-color: rgb(152,152,152,0.2);
+    border-color: rgb(152,152,152,0.2);
+    border-width: 1px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Janna LT";
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+    position: relative;
+    top:10px;
+    left: 200px;
+	}
+	#back{
+    background-color: rgb(152,152,152,0.2);
+    border-color: rgb(152,152,152,0.2);
+    border-width: 1px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Janna LT";
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+    position: relative;
+    top:10px;
+    right: 150px;
+	}
+    #adimge{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        bottom: 25px;
+        left: 985px;
+    }
+    #cancelimg{
+        width: 50px;
+        height: 37px;
+        position: relative;
+        bottom: 57px;
+        left: 757px;
+    }
+    #helpimg{
+        width: 60px;
+        height: 60px;
+        position: relative;
+        top: 100px;
+        left: 57px;
+    }
+</style>
+
+	<div style="position:relative; top:3px; left:10px; width:1550px">
+		<input class="basenav" id="nav1" type="submit" value="الإعدادات" />
+		<input class="basenav" id="nav7" type="submit" value="أنظمة أخرى" />
+		<input class="basenav" id="nav8" type="submit" value="جرد مخزني" />
+		<input class="basenav" id="nav2" type="submit" value="إدارة الموارد البشرية" />
+		<input class="basenav" id="nav3" type="submit" value="إدارة الموظفين" />
+		<input id="nav4" type="submit" value="إدارة المخازن" />
+		<input class="basenav" id="nav5" type="submit" value="إدارة النظام" />
+		<input id="nav6" type="submit" value="إدارة حسابات المخازن" />
+	</div>
+	
+	
+	
+		<img id="settingimg" src="~/images/settings.png" />
+		<img id="storeimg" src="~/images/store.png" />
+		<img id="employeesimg" src="~/images/employees.png" />
+		<img id="sourceimg" src="~/images/source.png" />
+		<img id="systemimg" src="~/images/system.png" />
+		<div><img id="logoimg" src="~/images/logos.png" /></div>
+		<div><img id="drowerimg" src="~/images/drower.png" /></div>
+
+
+		<h1>إضافة صنف جديد</h1>
+
+
+<form style="position:relative;top:50px" asp-action="Create" asp-controller="Store">
+
+    <label id="lab1" asp-for="ItemName">اسم الصنف</label>
+    <input id="inp1" type="text" asp-for="ItemName" />
+
+    <label id="lab2" asp-for="ItemCode">كود الصنف</label>
+    <input id="inp2" type="text" asp-for="ItemCode" />
+
+    <label id="lab3" asp-for="IsFirstPurchase">شراء لأول مرة</label>
+    <input id="inp3" type="text" asp-for="IsFirstPurchase" />
+
+    <label id="lab4" asp-for="PurchaseAmount">مشتريات الصنف</label>
+    <input id="inp4" type="text" asp-for="PurchaseAmount" />
+
+    <label id="lab5" asp-for="SalesAmount">مبيعات الصنف</label>
+    <input id="inp5" type="text" asp-for="SalesAmount" />
+
+    <label id="lab6" asp-for="StockQuantity">الكمية في المخزن</label>
+    <input id="inp6" type="text" asp-for="StockQuantity" />
+
+	<input id="go" type="submit" value="إضافة" />
+	<a asp-action="Index"><input id="back" type="button" value="إلغاء" /></a>
+
+    <div><img id="adimge" src="~/images/add.png" /></div>
+    <div><img id="cancelimg" src="~/images/cancel.png" /></div>
+    <div><a href=""><img id="helpimg" src="~/images/help.png" title="مساعدة"/></a></div>
+    
+
+</form>
+*@
